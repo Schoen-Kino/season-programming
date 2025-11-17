@@ -4,7 +4,7 @@
 
 ## About schön.kino
 
-schön.kino is a living space cinema hosted in Vienna, featuring carefully curated film screenings every Wednesday at 19h30. Each season follows a specific theme and presents a selection of films that explore different aspects of that theme.
+schön.kino is a living space cinema hosted in Vienna, featuring carefully curated film screenings every Thursday at 19h30. Each season follows a specific theme and presents a selection of films that explore different aspects of that theme.
 
 ## Website Overview
 

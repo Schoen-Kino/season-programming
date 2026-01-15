@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Primary Meta Tags -->
+    <meta name="title" content="schön.kino - living space cinema">
+    <meta name="description" content="A cozy living room cinema in Vienna showing carefully curated films. Join us every Wednesday at 19h30 for Season 8: Grizzly Man.">
+ 
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://schon-kino.github.io/season-programming/">
+    <meta property="og:title" content="schön.kino - living space cinema">
+    <meta property="og:description" content="A cozy living room cinema in Vienna showing carefully curated films. Join us every Wednesday at 19h30 for Season 8: Grizzly Man.">
+    <meta property="og:image" content="https://schon-kino.github.io/season-programming/images/social-preview.png">
+ 
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://schon-kino.github.io/season-programming/">
+    <meta property="twitter:title" content="schön.kino - living space cinema">
+    <meta property="twitter:description" content="A cozy living room cinema in Vienna showing carefully curated films. Join us every Wednesday at 19h30 for Season 8: Grizzly Man.">
+    <meta property="twitter:image" content="https://schon-kino.github.io/season-programming/images/social-preview.png">
+    
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
+    <link rel="icon" href="images/favicon.ico">
+    
+    <title>schön.kino</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+    
+    <script>
+        // Determine if we're in a GitHub Pages subpath deployment
+        const basePath = window.location.pathname.includes('season-programming') ? 
+                        '/season-programming' : '';
+                        
+        // Set the base href dynamically
+        document.write(`<base href="${basePath}/">`);
+    </script>
+</head>
+<body>
+    <div class="header-container">
+        <div class="text-overlay">
+            <h1>schön.</h1>
+            <h1>kino</h1>
+        </div>
+        <div class="nav-container">
+            <a href="/season-programming/archive/" class="archive-button">Season Archive</a>
+        </div>
+    </div>
+    
+    <div class="main-content">
+        <div class="container">
+            <div class="poster-container">
+                <img src="images/Poster.jpg" alt="schön.kino Season 8 Poster" class="poster-image">
+            </div>
+        </div>
+    </div>
+    
+    <footer>
+        <div class="about-section">
+            <div class="festival-info">
+                <h2>schönbrunner straße 120</h2>
+                <h3>19h30 thursdays</h3>
+            </div>
+            
+            <div class="about-text">
+                <p class="welcome">Living space cinema.</p>
+                <p class="season-heading">Season 8: Grizzly Man</p>
+                <p>This season of movie-seeing brings a collectively curated series of films. The stories speak about [THEME DESCRIPTION].</p>
+                
+                <p class="program-heading">Program</p>
+                
+                <div class="schedule">
+                    <div class="schedule-item">
+                      <div class="movie-date">[DATE 1]</div>
+                      <div class="movie-info">
+                        <strong>[MOVIE TITLE 1]</strong><br>
+                        <span class="director-info">[DIRECTOR 1] ([YEAR 1], [DURATION 1])</span>
+                      </div>
+                    </div>
+                  
+                    <div class="schedule-item">
+                      <div class="movie-date">[DATE 2]</div>
+                      <div class="movie-info">
+                        <strong>[MOVIE TITLE 2]</strong><br>
+                        <span class="director-info">[DIRECTOR 2] ([YEAR 2], [DURATION 2])</span>
+                      </div>
+                    </div>
+                  
+                    <div class="schedule-item">
+                      <div class="movie-date">[DATE 3]</div>
+                      <div class="movie-info">
+                        <strong>Snacks: a selection of shorts</strong><br>
+                    
+                        <div class="short-film">
+                          <span class="short-title">[SHORT 1]</span><br>
+                          <span class="short-director">[SHORT DIRECTOR 1] ([SHORT COUNTRY 1] [SHORT YEAR 1], [SHORT DURATION 1])</span>
+                        </div>
+                    
+                        <div class="short-film">
+                          <span class="short-title">[SHORT 2]</span><br>
+                          <span class="short-director">[SHORT DIRECTOR 2] ([SHORT COUNTRY 2] [SHORT YEAR 2], [SHORT DURATION 2])</span>
+                        </div>
+                    
+                        <div class="short-film">
+                          <span class="short-title">[SHORT 3]</span><br>
+                          <span class="short-director">[SHORT DIRECTOR 3] ([SHORT COUNTRY 3] [SHORT YEAR 3], [SHORT DURATION 3])</span>
+                        </div>
+                      </div>
+                    </div>
+                  
+                    <div class="schedule-item">
+                      <div class="movie-date">[DATE 4]</div>
+                      <div class="movie-info">
+                        <strong>[MOVIE TITLE 3]</strong><br>
+                        <span class="director-info">[DIRECTOR 3] ([YEAR 3], [DURATION 3])</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+            </div>
+        </div>         
+    </footer>
+</body>
+</html>

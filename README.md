@@ -10,11 +10,6 @@ schön.kino is a living space cinema hosted in Vienna, featuring carefully curat
 
 This repository hosts the website for schön.kino's seasonal programming. The site provides information about current and past screening seasons, including film schedules, descriptions, and themes.
 
-### Access
-
-- **Current Season:** https://schon-kino.github.io/season-programming/
-- **Archive:** https://schon-kino.github.io/season-programming/archive/
-
 ## Technical Details
 
 
@@ -59,7 +54,7 @@ This workflow runs automatically on pushes to main or can be triggered manually.
 After creating a new season:
 
 1. Replace the placeholder content in `seasons/seasonX/index.html` with actual program details
-2. Update the `seasons/seasonX/images/Poster.jpg` file with the season poster
-3. Modify styles in `seasons/seasonX/styles.css` if needed for season-specific styling
-
-Changes pushed to the main branch will automatically deploy to GitHub Pages.
+2. Update the `seasons/seasonX/images/poster-seasonX.jpg` file with the season poster
+4. Modify styles in `seasons/seasonX/styles.css` if needed for season-specific styling
+5. Update `index.html` with the correct season (This is not done automatically)
+6. Run deployment action

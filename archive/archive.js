@@ -4,15 +4,15 @@ document.addEventListener('DOMContentLoaded', function() {
 
 async function fetchSeasons() {
     try {
-        // Try to fetch seasons-data.json from the current directory first
-        let response = await fetch('seasons-data.json');
-        if (!response.ok) {
-            // If not found, try parent directory
-            response = await fetch('../seasons-data.json');
-            if (!response.ok) {
-                throw new Error('Failed to fetch seasons data');
-            }
+        if (window.SiteUtils && typeof window.SiteUtils.fetchSeasonsData === 'function') {
+            return await window.SiteUtils.fetchSeasonsData();
         }
+
+        const response = await fetch('../seasons-data.json');
+        if (!response.ok) {
+            throw new Error('Failed to fetch seasons data');
+        }
+
         return await response.json();
     } catch (error) {
         console.error('Error loading seasons data:', error);
@@ -20,6 +20,33 @@ async function fetchSeasons() {
             '<div class="error">Could not load seasons. Please try again later.</div>';
         return { seasons: [] };
     }
+}
+
+function posterCandidates(season) {
+    const seasonNum = season.number;
+    const base = `../seasons/season${seasonNum}/images/`;
+    const fromData = season.poster ? [`${base}${season.poster}`] : [];
+
+    return [
+        ...fromData,
+        `${base}poster-season${seasonNum}.jpg`,
+        `${base}poster-season${seasonNum}.png`,
+        `${base}poster-season${seasonNum}.jpeg`,
+        `${base}poster-season${seasonNum}.webp`,
+        `${base}Poster.jpg`,
+        `${base}Poster.png`,
+        `${base}social-preview.png`
+    ];
+}
+
+function setImageWithFallback(image, candidates, index = 0) {
+    if (index >= candidates.length) {
+        image.style.display = 'none';
+        return;
+    }
+
+    image.onerror = () => setImageWithFallback(image, candidates, index + 1);
+    image.src = candidates[index];
 }
 
 async function displaySeasons() {
@@ -38,17 +65,11 @@ async function displaySeasons() {
             card.className = 'season-card';
             
             const seasonNum = season.number;
-            // Use the new poster filename format with timestamp to prevent caching
-            const timestamp = Date.now();
             
             card.innerHTML = `
                 <a href="../seasons/season${seasonNum}/">
                     <div class="card-image">
-                        <img 
-                            src="../seasons/season${seasonNum}/images/poster-season${seasonNum}.jpg?t=${timestamp}" 
-                            alt="Season ${seasonNum} Poster" 
-                            onerror="this.onerror=null; this.src='../images/placeholder.jpg'"
-                        >
+                        <img alt="Season ${seasonNum} Poster">
                     </div>
                     <div class="card-content">
                         <div class="season-number">Season ${seasonNum}</div>
@@ -56,6 +77,9 @@ async function displaySeasons() {
                     </div>
                 </a>
             `;
+
+            const image = card.querySelector('img');
+            setImageWithFallback(image, posterCandidates(season));
             
             grid.appendChild(card);
         });

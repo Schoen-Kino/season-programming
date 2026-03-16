@@ -1,12 +1,10 @@
 name: Deploy to GitHub Pages
 
 on:
+  push:
+    branches:
+      - main
   workflow_dispatch:
-    inputs:
-      confirm:
-        description: 'Type "deploy" to confirm deployment'
-        required: true
-        default: ''
 
 # Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
 permissions:
@@ -20,17 +18,7 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
-  check:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Check confirmation
-        if: github.event.inputs.confirm != 'deploy'
-        run: |
-          echo "You must type 'deploy' to confirm deployment"
-          exit 1
-
   build:
-    needs: check
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
@@ -39,99 +27,15 @@ jobs:
       - name: Setup Pages
         uses: actions/configure-pages@v4
 
-      - name: Debug repository content
-        run: |
-          echo "=== Repository Structure ==="
-          ls -la
-          echo "=== Seasons Directory ==="
-          ls -la seasons/ || echo "Seasons directory not found"
-          echo "=== Available Season Folders ==="
-          ls -la seasons/*/ || echo "No season folders found"
-
-      - name: Find latest season number
-        id: find-latest
-        run: |
-          if [ -d "seasons" ]; then
-            latest=$(ls seasons | grep 'season' | sed 's/season//' | sort -n | tail -n 1)
-            if [ -z "$latest" ]; then
-              echo "No seasons found in directory"
-              latest=1  # Default to 1 if no seasons are found
-            fi
-          else
-            echo "Seasons directory not found"
-            latest=1  # Default to 1 if seasons directory doesn't exist
-          fi
-          echo "Latest season: $latest"
-          echo "latest_season=$latest" >> $GITHUB_OUTPUT
-
-      - name: Display debug info
-        run: |
-          echo "Latest season number: ${{ steps.find-latest.outputs.latest_season }}"
-          echo "Current directory: $(pwd)"
-          echo "Index.html exists: $(test -f index.html && echo 'Yes' || echo 'No')"
-          echo "Seasons-data.json exists: $(test -f seasons-data.json && echo 'Yes' || echo 'No')"
-
       - name: Build site structure
         run: |
-          # Create clean deployment directory
           mkdir -p _site
-          
-          # STEP 1: Root files that should be preserved
-          echo "Copying root files..."
-          cat index.html > _site/index.html || echo "Warning: index.html not found"
-          cat seasons-data.json > _site/seasons-data.json || echo "Warning: seasons-data.json not found"
-          cat debug.html > _site/debug.html || echo "Warning: debug.html not found"
-          
-          # Create .nojekyll file to disable Jekyll processing
+          rsync -av --delete \
+            --exclude='.git' \
+            --exclude='.github' \
+            --exclude='_site' \
+            ./ _site/
           touch _site/.nojekyll
-          
-          # STEP 2: Create archive structure
-          echo "Setting up archive..."
-          mkdir -p _site/archive
-          cp -r archive/* _site/archive/ || echo "Warning: archive directory not found or empty"
-          
-          # STEP 3: Copy seasons data to archive
-          cp seasons-data.json _site/archive/ || echo "Warning: couldn't copy seasons-data.json to archive"
-          
-          # STEP 4: Create seasons directory in both the root and archive
-          echo "Setting up seasons at root level..."
-          mkdir -p _site/seasons
-          cp -r seasons/* _site/seasons/ || echo "Warning: seasons directory not found or empty"
-          
-          # STEP 5: Check if image files were renamed and handle both cases
-          echo "Checking for renamed image files..."
-          
-          # For Season 1:
-          if [ -f "seasons/season1/images/poster-season1.jpg" ]; then
-            echo "Using new poster filename for season 1"
-          else
-            # If the renamed file doesn't exist but the old one does, create it
-            if [ -f "seasons/season1/images/Poster.jpg" ]; then
-              echo "Copying Poster.jpg to poster-season1.jpg for season 1"
-              cp "seasons/season1/images/Poster.jpg" "seasons/season1/images/poster-season1.jpg" 
-              cp "seasons/season1/images/Poster.jpg" "_site/seasons/season1/images/poster-season1.jpg"
-            else
-              echo "Warning: No poster found for season 1"
-            fi
-          fi
-          
-          # For Season 2:
-          if [ -f "seasons/season2/images/poster-season2.jpg" ]; then
-            echo "Using new poster filename for season 2"
-          else
-            # If the renamed file doesn't exist but the old one does, create it
-            if [ -f "seasons/season2/images/Poster.jpg" ]; then
-              echo "Copying Poster.jpg to poster-season2.jpg for season 2"
-              cp "seasons/season2/images/Poster.jpg" "seasons/season2/images/poster-season2.jpg"
-              cp "seasons/season2/images/Poster.jpg" "_site/seasons/season2/images/poster-season2.jpg"
-            else
-              echo "Warning: No poster found for season 2"
-            fi
-          fi
-          
-          # STEP 6: List what we've built
-          echo "=== Site Structure ==="
-          find _site -type f | sort
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3

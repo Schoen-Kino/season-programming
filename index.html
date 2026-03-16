@@ -4,13 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>schön.kino - Redirecting to Current Season</title>
-    <script>
-        // Redirect to the current season (season8)
-        window.location.replace('./seasons/season8/');
-    </script>
-    <meta http-equiv="refresh" content="0; url=./seasons/season8/">
+    <script src="./shared/site-utils.js" defer></script>
+    <script src="./index.js" defer></script>
 </head>
 <body>
-    <p>Redirecting to current season... <a href="./seasons/season8/">Click here if not redirected automatically</a></p>
+    <p id="redirect-status">Redirecting to current season...</p>
+    <p>
+        <a id="redirect-link" href="./archive/">Open archive</a>
+    </p>
 </body>
 </html>

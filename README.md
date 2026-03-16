@@ -34,12 +34,9 @@ This will:
 
 The `deploy.yml` workflow handles deployment to GitHub Pages:
 
-1. Finds the latest season number
-2. Creates a site structure with:
-   - Latest season content at the root
-   - Archive page with access to all seasons
-   - All seasons in the archive/seasons directory
-3. Uploads and deploys the site to GitHub Pages
+1. Publishes the repository as a static site to GitHub Pages
+2. Keeps all paths and assets exactly as in the repo
+3. Uploads and deploys the generated artifact
 
 This workflow runs automatically on pushes to main or can be triggered manually.
 
@@ -55,6 +52,7 @@ After creating a new season:
 
 1. Replace the placeholder content in `seasons/seasonX/index.html` with actual program details
 2. Update the `seasons/seasonX/images/poster-seasonX.jpg` file with the season poster
-4. Modify styles in `seasons/seasonX/styles.css` if needed for season-specific styling
-5. Update `index.html` with the correct season (This is not done automatically)
-6. Run deployment action
+3. Modify styles in `seasons/seasonX/styles.css` if needed for season-specific styling
+4. Push to `main` (deployment runs automatically)
+
+The root `index.html` now redirects automatically to the latest season by reading `seasons-data.json`, so no manual season-number edits are needed.

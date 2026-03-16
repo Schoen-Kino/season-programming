@@ -1,0 +1,252 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #000;
+    font-family: 'Inter', sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    color: white;
+}
+
+.main-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    padding: 0 2rem 2rem;
+    background-color: #000;
+    position: relative;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem 2rem 0;
+    width: 100%;
+}
+
+.text-overlay {
+    margin-bottom: 2rem;
+    text-align: left;
+    flex: 1;
+}
+
+h1 {
+    font-size: 7.5vw;
+    line-height: 0.9;
+    font-weight: 700;
+    text-transform: lowercase;
+    color: #ff3030;
+    margin: 0;
+    padding: 0;
+    letter-spacing: -0.02em;
+    transform-origin: left;
+    transform: scaleY(1.05);
+}
+
+.container {
+    width: 80vmin;
+    height: auto;
+    max-width: 90vw;
+    margin: 0 auto;
+}
+
+.poster-container {
+    width: 100%;
+    height: auto;
+}
+
+.poster-image {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    display: block;
+}
+
+footer {
+    background-color: #000;
+    color: white;
+    padding: 4rem 2rem;
+    width: 100%;
+}
+
+.program-heading {
+    font-weight: 700;
+    font-size: 1.5rem;
+    margin: 2rem 0 1rem 0;
+    color: #ff3030;
+}
+
+.about-section {
+    max-width: 800px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 3rem;
+}
+
+h2 {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+    color: #ff3030;
+}
+
+h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    color: #fff;
+}
+
+p {
+    margin-bottom: 1rem;
+    line-height: 1.6;
+    font-size: 1.1rem;
+}
+
+.welcome {
+    font-size: 1.5rem;
+    font-style: italic;
+    margin-bottom: 1.5rem;
+    color: #ff3030;
+}
+
+.season-heading {
+    font-weight: 700;
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+    color: white;
+    text-decoration: underline;
+}
+
+.schedule {
+    padding-left: 1rem;
+    position: relative;
+    margin: 2rem 0;
+}
+
+.schedule::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 3px;
+    height: calc(100% - 4rem); /* Subtracting bottom margin of last movie info */
+    background-color: #ff3030;
+}
+
+.schedule-item {
+    display: grid;
+    grid-template-columns: 100px 1fr;
+    align-items: start;
+    color: #fff;
+}
+
+.movie-date {
+    text-align: left;
+    padding-right: 1rem;
+    font-weight: 600;
+    color: #fff;
+    line-height: 1.6;
+}
+
+.movie-info {
+    padding-left: 1rem;
+    line-height: 1.6;
+    margin-bottom: 4rem;
+    color: #fff;
+}
+
+.director-info {
+    font-size: 0.95em;
+    font-weight: 400;
+    opacity: 0.9;
+    display: block;
+    line-height: 1;
+    word-break: break-word;
+}
+
+.short-film {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.short-title {
+    font-weight: 600;
+    color: white;
+    margin-bottom: 0.2rem;
+}
+
+.short-director {
+    display: block;
+    font-weight: 400;
+    line-height: 1;
+    opacity: 0.9;
+    color: white;
+}
+
+.nav-container {
+    position: static;
+    text-align: right;
+    padding: 0;
+    z-index: 100;
+}
+
+.archive-button {
+    background-color: #ff3030;
+    color: white;
+    border: none;
+    padding: 0.5rem 1.5rem;
+    font-weight: 600;
+    font-size: 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+    display: inline-block;
+}
+
+.archive-button:hover {
+    background-color: #e52020;
+}
+
+@media (max-width: 768px) {
+    h1 {
+        font-size: 16vw;
+    }
+    
+    .container {
+        width: 90vw;
+    }
+
+    .about-section {
+        grid-template-columns: 1fr;
+    }
+
+    .nav-container {
+        padding: 0.5rem 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .main-content {
+        padding: 1rem;
+    }
+
+    .container {
+        width: 95vw;
+    }
+    
+    .nav-container {
+        padding: 0.5rem 1rem;
+    }
+    
+    .archive-button {
+        padding: 0.4rem 1rem;
+        font-size: 0.9rem;
+    }
+}

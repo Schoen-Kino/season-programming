@@ -238,6 +238,45 @@
       "time": "Doors 19:00",
       "background": "#fff",
       "blurb": "TA-DA!🍰 bday party!!💘 25 april 💌 cake, chats, snacks, a selection of shorts, and dj!🌱 shorts by safdie brothers, leonor teles, and others (surprise!)"
+    },
+    {
+      "number": 11,
+      "theme": "Women on the Verge of a Nervous Breakdown",
+      "time": "19:30",
+      "blurb": "No text this month — we were feeling too lazy to care.",
+      "program": [
+        {
+          "date": "May 16",
+          "title": "Women on the Verge of a Nervous Breakdown",
+          "credit": "Pedro Almodóvar (1988)"
+        }
+      ]
+    },
+    {
+      "number": 12,
+      "theme": "La ley del deseo",
+      "time": "Doors 19:30",
+      "blurb": "Pablo is in love with Juan but doesn’t feel corresponded. Pablo meets Antonio, an uptight young man. What’s initially meant to be a brief affair escalates when Antonio falls possessively in love. In his mad desire, he’ll stop at nothing to get Pablo to fall in love with him. A minimalist poster for a maximalist film: expect young Antonio Banderas, hookers, incest, cocaine and bare asses, in all but black and white.",
+      "program": [
+        {
+          "date": "June 20",
+          "title": "La ley del deseo (Law of Desire)",
+          "credit": "Pedro Almodóvar (1987)"
+        }
+      ]
+    },
+    {
+      "number": 13,
+      "theme": "La Collectionneuse",
+      "time": "Doors 20h",
+      "blurb": "A tale of games of love and chance. Haydée, accused of being a “collector” of men, arrives at a villa in the French Riviera and disturbs the otherwise calm holidays of three old friends. All they wanted was a peaceful Summer of reading and swimming… or can there be danger in this idleness?",
+      "program": [
+        {
+          "date": "July 19",
+          "title": "La Collectionneuse (The Collector)",
+          "credit": "Éric Rohmer (1967, 1h30)"
+        }
+      ]
     }
   ]
 }

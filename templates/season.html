@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Primary Meta Tags -->
+    <meta name="title" content="schön.kino - living space cinema">
+    <meta name="description" content="{{META_DESCRIPTION}}">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="{{SEASON_URL}}">
+    <meta property="og:title" content="schön.kino - living space cinema">
+    <meta property="og:description" content="{{META_DESCRIPTION}}">
+    <meta property="og:image" content="{{OG_IMAGE}}">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="{{SEASON_URL}}">
+    <meta property="twitter:title" content="schön.kino - living space cinema">
+    <meta property="twitter:description" content="{{META_DESCRIPTION}}">
+    <meta property="twitter:image" content="{{OG_IMAGE}}">
+
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
+    <link rel="icon" href="images/favicon.ico">
+
+    <title>{{TITLE}}</title>
+    <link rel="stylesheet" href="../../shared/season.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">{{STYLE_OVERRIDE}}
+</head>
+<body>
+    <div class="header-container">
+        <div class="text-overlay">
+            <h1>schön.</h1>
+            <h1>kino</h1>
+        </div>
+        <div class="nav-container">
+            <a href="../../archive/" class="archive-button">Season Archive</a>
+        </div>
+    </div>
+
+    <div class="main-content">
+        <div class="container">
+            <div class="poster-container">
+                <img src="images/{{POSTER}}" alt="schön.kino Season {{SEASON_NUMBER}} Poster" class="poster-image">
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="about-section">
+            <div class="festival-info">
+                <h2>{{ADDRESS}}</h2>
+                <h3>{{TIME}}</h3>
+            </div>
+
+            <div class="about-text">
+                <p class="welcome">Living space cinema.</p>
+                <p class="season-heading">Season {{SEASON_NUMBER}}: {{THEME}}</p>
+{{ABOUT_CONTENT}}
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

@@ -27,15 +27,8 @@ jobs:
       - name: Setup Pages
         uses: actions/configure-pages@v4
 
-      - name: Build site structure
-        run: |
-          mkdir -p _site
-          rsync -av --delete \
-            --exclude='.git' \
-            --exclude='.github' \
-            --exclude='_site' \
-            ./ _site/
-          touch _site/.nojekyll
+      - name: Build site
+        run: node build/build.js
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3

@@ -1,0 +1,243 @@
+{
+  "site": {
+    "baseUrl": "https://schon-kino.github.io/season-programming",
+    "defaults": {
+      "address": "schönbrunner straße 120",
+      "time": "19h30 thursdays"
+    }
+  },
+  "seasons": [
+    {
+      "number": 1,
+      "theme": "SHARING",
+      "address": "schönbrunner straße",
+      "time": "19h30 wednesdays",
+      "metaDescription": "A cozy living room cinema in Vienna showing carefully curated films about friendship, community, and belonging. Join us every Wednesday at 19h30 for Season 1: SHARING.",
+      "blurb": "This first season of movie-seeing brings a collectively curated series of films, first watched with friends who are away or ever popping up in conversations with those in Vienna. The stories too speak about friendship, about a sense of community, of belonging. Of being present and witnessing the world.",
+      "program": [
+        {
+          "date": "April 30",
+          "title": "The Fire Within: A Requiem for Katja and Maurice Krafft",
+          "credit": "Werner Herzog (2022, 1h21m)"
+        },
+        {
+          "date": "May 7",
+          "title": "Where is the Friend's House?",
+          "credit": "Abbas Kiarostami (1987, 1h23m)"
+        },
+        {
+          "date": "May 14",
+          "title": "Snacks: a selection of salty shorts",
+          "shorts": [
+            { "title": "Shrooms", "credit": "Jorge Jácome (PT 2023, 18’)" },
+            { "title": "Words, Words, Words…", "credit": "Michaela Pavlátová (CZ 1991, 8’)" },
+            { "title": "FOOD", "credit": "Jan Švankmajer (CZ 1992, 17’)" },
+            { "title": "Bug Diner", "credit": "Phoebe Jane Hart (US 2024, 7’)" },
+            { "title": "Dance away the pain", "credit": "Kate Hollowell (US 2023, 3’51”)" }
+          ]
+        },
+        {
+          "date": "May 21",
+          "title": "Happy-Go-Lucky",
+          "credit": "Mike Leigh (2008, 1h58m)"
+        },
+        {
+          "date": "May 29",
+          "title": "Daisies",
+          "credit": "Věra Chytilová (1966, 1h14m)",
+          "alert": "Rescheduled: May 29!"
+        }
+      ]
+    },
+    {
+      "number": 2,
+      "theme": "FLIRTING",
+      "address": "schönbrunner straße",
+      "time": "19h30 wednesdays",
+      "blurb": "In this season we will explore the ways we connect and disconnect with each another. On tangled webs of people and emotions, flirting is all around — from Claire’s very particular knee to soviet Ninotchka falling hard for the charms of capitalism. What’s in a brief exchange of looks? Is flirting just innocent play? Or can the aftermath haunt us?",
+      "program": [
+        {
+          "date": "June 4",
+          "title": "Le Genou de Claire (Claire's Knee)",
+          "credit": "Éric Rohmer (1970, 1h45m)",
+          "past": true
+        },
+        {
+          "date": "June 11",
+          "title": "Ninotchka",
+          "credit": "Ernst Lubitsch (1939, 1h50m)",
+          "past": true
+        },
+        {
+          "date": "June 18",
+          "title": "Brief Encounters: a selection of shorts",
+          "alert": "Rescheduled: June 17!",
+          "past": true,
+          "shorts": [
+            { "title": "The Bakery Girl of Monceau", "credit": "Éric Rohmer (FR 1962, 24m)" },
+            { "title": "All the Boys are Called Patrick", "credit": "Jean-Luc Godard (FR 1959, 21m)" },
+            { "title": "Tram", "credit": "Michaela Pavlátová (CZ 2012, 8m)" },
+            { "title": "She Don't Fade", "credit": "Cheryl Dunye (USA 1991, 23m)" }
+          ]
+        },
+        {
+          "date": "June 25",
+          "title": "Passages",
+          "credit": "Ira Sachs (2023, 1h32)"
+        }
+      ]
+    },
+    {
+      "number": 3,
+      "theme": "DIVING",
+      "address": "schönbrunner straße",
+      "time": "19h30 wednesdays",
+      "blurb": "We dive into Summer with stories that speak of aquatic adventures and underwater worlds. Whether it is the sea or human psyche, we explore what lies beneath the surface: are these unseen worlds full of wonder, or are there dark truths waiting to be unveiled?",
+      "program": [
+        {
+          "date": "July 07",
+          "title": "The Life Aquatic with Steve Zissou",
+          "credit": "Wes Anderson (2004, 1h54min)",
+          "past": true
+        },
+        {
+          "date": "July 23",
+          "title": "The Big Blue",
+          "credit": "Luc Besson (1988, 2h12min)",
+          "past": true
+        },
+        {
+          "date": "July 30",
+          "title": "A Bigger Splash",
+          "credit": "Luca Guadagnino (2015, 2h15min)",
+          "alert": "Cancelled"
+        }
+      ]
+    },
+    {
+      "number": 4,
+      "theme": "SWIMMING",
+      "custom": true,
+      "blurb": "August in the city? We'll be by the seaside. Swimming in salty waters, in true silly season spirit with Jacques Tati, moving to end-of-Summer blues with Éric Rohmer's A Summer's Tale."
+    },
+    {
+      "number": 5,
+      "theme": "Returning",
+      "blurb": "After Summer, September is a return. To home, to the routines, to ourselves. Maybe a new beginning. Or an ending - after all, the leaves on the trees are yellowing and falling... So this season we'll be seeing stories of Returning: to a home taken from us (The Time that Remains, Return to Seoul), to a community that once welcomed us, to dreaming places (La Chimera)... Or we can find a point of no return (Happy Together). Glad to be back.",
+      "program": [
+        {
+          "date": "Sept 11",
+          "title": "The Time that Remains",
+          "credit": "Elia Suleiman (2009, 1h49m)"
+        },
+        {
+          "date": "Sept 18",
+          "title": "Return to Seoul",
+          "credit": "Davy Chou (2022, 1h59m)"
+        },
+        {
+          "date": "Sept 25",
+          "title": "La Chimera",
+          "credit": "Alice Rohrwacher (2023, 2h13m)"
+        },
+        {
+          "date": "Oct 2",
+          "title": "Happy Together",
+          "credit": "Wong Kar-Wai (1997, 1h36m)"
+        }
+      ]
+    },
+    {
+      "number": 6,
+      "theme": "MADDENING",
+      "blurb": "hello schön.kinoers! 🎃 here is the program for this month. in full halloween spirit, October is MADDENING: along these four weeks, the level of terror will rise from daily life psychosis in Red Desert to full blown-up psychological terror in Possession. 👻 no ghosts or zombies here, just the sheer terror of real life… 🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂",
+      "program": [
+        {
+          "date": "Oct 9",
+          "title": "Red Desert",
+          "credit": "Michelangelo Antonioni (1964, 1h57m)"
+        },
+        {
+          "date": "Oct 16",
+          "title": "Funny Games",
+          "credit": "Michael Haneke (1997, 1h49m)"
+        },
+        {
+          "date": "Oct 23",
+          "title": "Speak No Evil",
+          "credit": "Christian Tafdrup (2022, 1h37m)"
+        },
+        {
+          "date": "Oct 30",
+          "title": "Possession",
+          "credit": "Andrzej Żuławski (1981, 2h4m)"
+        }
+      ]
+    },
+    {
+      "number": 7,
+      "theme": "GLEANING",
+      "blurb": "It's the season of harvest and reflection: when we gather what remains, notice what has been lost, and prepare for what will return. We look at what was overlooked and say \"there is still beauty here\". This is a cinema of gleaning: of gathering fragments of life, grace, and feeling before the year exhales.",
+      "program": [
+        {
+          "date": "Nov 6",
+          "title": "The Gleaners and I",
+          "credit": "Agnès Varda (2000, 1h22m, FR)"
+        },
+        {
+          "date": "Nov 13",
+          "title": "Happy as Lazzaro",
+          "credit": "Alice Rohrwacher (2018, 2h08m, IT/CH/FR/DE)"
+        },
+        {
+          "date": "Nov 20",
+          "title": "Nostalgia for the Light",
+          "credit": "Patricio Guzmán (2010, 1h30m, CL/FR/DE/ES)"
+        },
+        {
+          "date": "Nov 27",
+          "title": "La historia oficial (The Official Story)",
+          "credit": "Luis Puenzo (1985, 1h52m, AR)"
+        },
+        {
+          "date": "Nov 29",
+          "title": "Central Station",
+          "credit": "Walter Salles (1998, 1h50m, BR/FR)"
+        }
+      ]
+    },
+    {
+      "number": 8,
+      "theme": "Grizzly Man",
+      "time": "19h00 saturdays",
+      "blurb": "It's not nice to eat your friends…! Try telling that to a bear. Grizzly Man is a tragicomedy documentary of Timothy Treadwell, an untrained film-maker who believed had a special connection to bears in Alaska. Until one day he is eaten by one. Herzog takes hundreds of hours of videotape and assembles them into a story: sublime, dramatic shots of the bears, teaching us about nature and… well… human stupidity. In line with current world news, here's to a bizarre start of the year!",
+      "program": [
+        {
+          "date": "Jan 17",
+          "title": "Grizzly Man",
+          "credit": "Werner Herzog (2005, 1h44m)"
+        }
+      ]
+    },
+    {
+      "number": 9,
+      "theme": "Recordações da Casa Amarela",
+      "time": "19h00",
+      "blurb": "Some call it a masterpiece, others say it’s the worst they’ve ever seen. João de Deus (João of God) is everything but a holy man. As a matter of fact, he is utterly disgusting: a perverted intellectual, passionate about Schubert, cinema, and… the landlord’s daughter. This can only go downhill from here. Like last month’s Timothy Treadwell, João is an outcast from society. The film follows him, witness to a series of absurd encounters in a Lisbon that no longer exists. A comedy of the absurd, a really boring movie, or simply bad? I guess we’ll find out. In true Lisbon spirit, better watched (or rather washed down?) with beer.",
+      "program": [
+        {
+          "date": "Feb 28",
+          "title": "Recollections of the yellow house",
+          "credit": "João César Monteiro (1989, 2h2m, PT)"
+        }
+      ]
+    },
+    {
+      "number": 10,
+      "theme": "BIRTHDAY!!!",
+      "time": "Doors 19:00",
+      "background": "#fff",
+      "blurb": "TA-DA!🍰 bday party!!💘 25 april 💌 cake, chats, snacks, a selection of shorts, and dj!🌱 shorts by safdie brothers, leonor teles, and others (surprise!)"
+    }
+  ]
+}

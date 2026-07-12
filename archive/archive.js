@@ -8,7 +8,7 @@ async function fetchSeasons() {
             return await window.SiteUtils.fetchSeasonsData();
         }
 
-        const response = await fetch('../seasons-data.json');
+        const response = await fetch('../data/seasons.json');
         if (!response.ok) {
             throw new Error('Failed to fetch seasons data');
         }

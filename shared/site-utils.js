@@ -13,9 +13,9 @@
     async function fetchSeasonsData() {
         const basePath = getBasePath();
         const candidates = [
-            `${basePath}/seasons-data.json`,
-            './seasons-data.json',
-            '../seasons-data.json'
+            `${basePath}/data/seasons.json`,
+            './data/seasons.json',
+            '../data/seasons.json'
         ];
 
         let lastError;
